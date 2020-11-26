@@ -1,0 +1,60 @@
+<div *ngIf="!loading" class="wrapper">
+    <div class="books-list">
+    <div class="filter">
+        <input type="text" placeholder="Filter By Name" [(ngModel)]="searchString">
+    </div>
+    <ul *ngIf="todoService.todos.length; else noTodos">
+        <li *ngFor="let todo of todoService.todos | todosFilter:searchString; let i=index"
+         (click)="onSelect(todo)"
+         [class.selected]="todo === selectedToDo">
+            <span [class.done]="todo.completed">  
+                {{todo.title}},  {{todo.author}}
+            </span>
+            <small>{{todo.date | date: 'medium'}}</small>
+
+            <button class="rm" (click)="removeToDo(todo.id)">&times; </button>
+        </li>
+    </ul>
+
+    <ng-template #noTodos>
+        <p style="text-align: center;">No todos now!</p>
+    </ng-template>
+</div>
+<div *ngIf="selectedToDo" class="book-present">
+    <div>
+      <img src="{{selectedToDo.imageLink}}"   alt="" width="100%">
+   </div>
+   <div> 
+    <ul>  
+        <li>
+         <span>  
+             {{selectedToDo.title}}
+        </span> 
+        </li>
+        <li>
+            <span>  
+                {{selectedToDo.author}}
+           </span>
+        </li>
+        <li>
+            <span>  
+                {{selectedToDo.catalogID}}
+           </span>
+        </li>
+        <li>
+            <span>  
+                {{selectedToDo.publishDate}}
+           </span>
+        </li>
+        <li>
+            <span>  
+               <a href="{{selectedToDo.coverURL}}" target="_blank"> {{selectedToDo?.coverURL}}</a>
+           </span>
+        </li> 
+    </ul> 
+    <button type="submit"  value="Submit" style="margin: 0 auto;">Submit</button>   
+   </div>
+ </div>
+</div>
+
+<p *ngIf="loading df">Loading...</p>

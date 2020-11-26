@@ -1,0 +1,33 @@
+[
+    
+    { 
+      "id": 1,
+      "title": "Fairy tales",
+      "author": "Hans Christian Andersen",
+      "catalogID": 209,
+      "publishDate": 1967,
+      "coverURL": "https://en.wikipedia.org/wiki/Fairy_Tales_Told_for_Children._First_Collection.\n",
+      "imageLink": "assets/images/fairy-tales.jpg",
+      "completed": false
+    },
+    { 
+      "id": 2,
+      "title": "The Divine Comedy",
+      "author": "Dante Alighieri",
+      "catalogID": 449,
+      "publishDate": 1934,
+      "coverURL": "https://en.wikipedia.org/wiki/Divine_Comedy\n",
+      "imageLink": "assets/images/the-divine-comedy.jpg",
+      "completed": false
+    },
+    { 
+      "id": 3,
+      "title": "Things Fall Apart",
+      "author": "Chinua Achebe",
+      "catalogID": 459,
+      "publishDate": 1978,
+      "coverURL": "https://en.wikipedia.org/wiki/Things_Fall_Apart\n",
+      "imageLink": "assets/images/things-fall-apart.jpg", 
+      "completed": false
+    }
+  ] 
