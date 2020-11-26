@@ -62,10 +62,10 @@ ul{
     }
 }
 .books-list{
-    width: 400px;
+     width: 100%; 
 }
 .book-present{
-    width: 600px;
+     width: 100%; 
     display: grid;
     grid-template-columns: 35% 1fr;
     grid-gap: 1em;
